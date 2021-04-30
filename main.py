@@ -41,6 +41,8 @@ def shopping():
         comparing(qualities, Spices)
     elif compare_selection == 5:
         comparing(qualities, legumes)
+ # Shopping function is a basic function that makes the function look clear
+
 
 #That's where program starts.
 print("Cimri Ticaret' e hoş geldiniz. Burada, lokasyonunuza en yakın 5 markete göre fiyat/performans kıyaslaması yapabileceğiniz bir hizmet sunmaktayız.\n ")
