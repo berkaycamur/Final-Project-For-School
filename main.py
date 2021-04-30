@@ -15,13 +15,17 @@ markets = ["A marketi", "B marketi", "C marketi", "D marketi", "E marketi"]
 #Data's location is finishing in here.
 
 def comparing(qualities, aisle):
-  empty_list =  {}
-  for i in range(0, len(qualities), 1):
-    for x in markets:
+  empty_list =  []
+  market_name = ""
+  for i in range(5):
       comparing_score = aisle[i] / qualities[i]
-      empty_list.update({x : comparing_score})
-    if i == 4:
-       print(empty_list)
+      empty_list.append(comparing_score)
+      if i == 4:
+          market_name = markets[empty_list.index(min(empty_list))]
+          print(f"{market_name}, {min(empty_list)} oranı ile bu kategoride en iyi fiyat/performans oranına sahip." 
+                f"\n Sayı ne kadar düşük ise o kadar iyi bir hizmet söz konusudur. Tüm marketlerin oranını aşağıda bulabilirsiniz.")
+          for x in range(5):
+              print(markets[x], empty_list[x] )
 #There is a function which compares the input arguments.
 
 def shopping():
@@ -29,15 +33,16 @@ def shopping():
                                   '\nManav Reyonu(1), Unlu Mamüller(2), Meşrubatlar(3), Baharat Çeşitleri(4), Baklagiller(5) '))
     if compare_selection == 1:
         comparing(qualities, GreenGroce)
-    if compare_selection == 2:
+    elif compare_selection == 2:
         comparing(qualities, Bakeries)
-    if compare_selection == 3:
+    elif compare_selection == 3:
         comparing(qualities, Drinks)
-    if compare_selection == 4:
+    elif compare_selection == 4:
         comparing(qualities, Spices)
-    if compare_selection == 5:
+    elif compare_selection == 5:
         comparing(qualities, legumes)
 
+#That's where program starts.
 print("Cimri Ticaret' e hoş geldiniz. Burada, lokasyonunuza en yakın 5 markete göre fiyat/performans kıyaslaması yapabileceğiniz bir hizmet sunmaktayız.\n ")
 city = input('Devam etmek için lütfen şehrinizi giriniz :')
 district = input('Lütfen semtinizi giriniz: ')
@@ -52,17 +57,3 @@ while(1):
   elif market_continue_check == "H" or market_continue_check == "h":
     print('İşlem son buldu.')
     break
-
-
-
-
-
-
-
-
-
-
-
-
-
-
