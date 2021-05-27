@@ -58,6 +58,6 @@ market_attributes_on_list = {'market_A' : [market_A.legumePrice, market_A.bakery
                              'market_D' : [market_D.legumePrice, market_D.bakeryPrice, market_D.greenGroce],
                              'market_E' : [market_E.legumePrice, market_E.bakeryPrice, market_E.greenGroce]}
 
-
+program()
 
 
